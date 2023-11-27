@@ -6,7 +6,7 @@ const NavaBar = () => {
   console.log(userData.value.loged);
   return (
     <nav>
-      <ul>
+      <ul className="flex gap-2">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -14,6 +14,12 @@ const NavaBar = () => {
           <Link to="/login">Login</Link>
         </li>
 
+        <li>
+          <Link to="/player">Player</Link>
+        </li>
+        <li>
+          <Link to="/inputs">Inputs</Link>
+        </li>
         {!userData.value?.loged ? (
           <></>
         ) : (

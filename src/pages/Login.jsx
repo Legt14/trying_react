@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../components/login/authProvider";
+import { Link } from "react-router-dom";
+import Input from "./ui_components/Input";
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -31,9 +33,7 @@ export const Login = () => {
         <section className="flex items-center">
           <section className="bg-indigo-50 h-screen w-[30rem] flex flex-col items-center justify-center gap-10">
             <section className="flex flex-col items-center gap-28">
-              <figure className="w-48 overflow-hidden">
-                <img src={penta_purple} alt="penta" />
-              </figure>
+              <figure className="w-48 overflow-hidden"></figure>
               <figure className="w-14 h-14 bg-[#220d47] rounded-2xl">
                 <img
                   src={user}
@@ -47,13 +47,13 @@ export const Login = () => {
                 <Input
                   id="username"
                   label="Username"
-                  func={formHandler}
+                  func={handlerForm}
                   type="text"
                 />
                 <Input
                   id="password"
                   label="Password"
-                  func={formHandler}
+                  func={handlerForm}
                   type="password"
                 />
               </section>
@@ -69,7 +69,6 @@ export const Login = () => {
           </section>
           <section className="bg-[#220d47] w-screen h-screen flex justify-center items-center">
             <figure className="w-96">
-              <img src={penta} alt="" />
             </figure>
             {/*  <div className="w-36 h-36 bg-purple-300 rounded-2xl"></div> */}
           </section>

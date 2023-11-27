@@ -18,4 +18,4 @@ const Input = ({ func, id, label, type }) => {
   );
 };
 
-export { Input };
+export default Input ;
